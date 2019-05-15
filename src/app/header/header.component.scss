@@ -1,0 +1,36 @@
+div{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background: rgb(83, 75, 66);
+  border: 2px grey solid;
+  position: sticky;
+  top: 0;
+}
+h1 {
+  align-self: center;
+  color: cadetblue;
+  font-family: cursive;
+  font-size: 400%;
+}
+img {
+  max-height: 200px;
+}
+nav {
+  display: flex;
+  flex-direction: column;
+  padding-right: 5px;
+  justify-content: center;
+  align-items: center;
+  color: cadetblue;
+}
+nav a, nav button {
+  color: rgb(176, 215, 216);
+}
+button{
+  background: plum;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 1px 1px 1px #000;
+  color: rgb(90, 88, 88);
+}
