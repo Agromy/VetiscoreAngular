@@ -1,0 +1,54 @@
+
+
+#artFooter1{
+    display: flex;
+    align-self: center;
+}
+footer article{
+    color: rgb(176, 215, 216);
+}
+#artFooter3{
+    display: flex;
+    flex-direction: column;
+    justify-content:  space-around;
+}
+#artFooter3 img {
+    height: 50px;
+   
+}
+
+#div1Foot2 .media{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+#div2Foot2 {
+    text-align : center;
+}
+
+h5{
+    font-size: 1.15em;
+    
+}
+
+#contact{
+    font-size: 1.5em;
+    color: whitesmoke;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#contact, #tel, #adresse {
+    padding: 0;
+}
+
+#map{
+    height: 500px;
+}
+
+p{
+    color: #ADCA48;
+}
+
+.media p{
+    padding: 0px;
+}
