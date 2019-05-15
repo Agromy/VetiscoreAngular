@@ -1,0 +1,54 @@
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-grow: 1;
+  min-block-size: 100vh;
+}
+
+main {
+  min-height: 400px;
+  flex-grow: 1;
+  font-family :cursive;
+
+}
+h1{
+  color: cadetblue;
+  text-align: center;
+}
+summary{
+  display: block;
+
+
+}
+summary::before{
+  content: "+";
+  color: #ADCA48;
+  float: left;
+  font-size: 1.5em;
+  font-weight: bold;
+  margin: -5px 5px 0 0;
+  padding: 0;
+  text-align: center;
+  width: 20px;
+}
+main p{
+  text-align: justify;
+  padding: 15px;
+  padding-top: 0px;
+  color: #ADCA48;
+}
+
+h2{
+  margin-bottom: 20px;
+  color: cadetblue;
+}
+
+h3{
+  color: cadetblue;
+}
+#pollution{
+  margin-top: 50px;
+  margin-bottom: 20px;
+}
