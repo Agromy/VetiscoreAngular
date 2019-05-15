@@ -1,3 +1,13 @@
-<p>
-  vet-detail works!
-</p>
+<div>
+    <h3>
+      Détail du Vêtement selectionné
+    </h3>
+    
+    <ul>
+      <li *ngFor="let vetement of detail">{{vetement.type}}</li>
+      <li *ngFor="let vetement of detail">{{vetement.marque}}</li>
+      <li *ngFor="let vetement of detail">{{vetement.lieuFabrication}}</li>
+      <li *ngFor="let vetement of detail">{{vetement.matériauxPrincipal}}</li>
+      <li *ngFor="let vetement of detail">{{vetement.prix}}</li>
+    </ul>
+    </div>

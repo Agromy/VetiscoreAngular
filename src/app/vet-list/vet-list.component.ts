@@ -7,7 +7,9 @@ import { Vetement, PrixRange } from '../vetement';
   styleUrls: ['./vet-list.component.scss']
 })
 export class VetListComponent implements OnInit {
-@Input() vetementList : Array<Vetement>
+@Input() blabla : Array<Vetement>
+/*grace à @input(), je récupère la propriété blabla que me donne vetilist.html
+dans la balise vet-list*/
   constructor() { }
 
   ngOnInit() {

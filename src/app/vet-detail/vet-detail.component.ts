@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Vetement, PrixRange } from '../vetement';
 
 @Component({
   selector: 'app-vet-detail',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class VetDetailComponent implements OnInit {
 
-  constructor() { }
-
-  ngOnInit() {
+  @Input() detail : Array<Vetement>
+  /*grace à @input(), je récupère la propriété détail que me donne vetilist.html
+  dans la balise vet-detail*/
+    constructor() { }
+  
+    ngOnInit() {
+    }
+  
   }
-
-}
+ 
