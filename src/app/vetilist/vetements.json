@@ -1,0 +1,26 @@
+[{
+"Type" : "Chaussettes",
+"Marque" : "Comptoir des cotonniers",
+"Lieu de Fabrication" : "France",
+"Matériau Principal" : "Coton",
+"Prix": "<50€"
+},
+
+{
+    "Type" : "Pantalon",
+    "Marque" : "Jules",
+    "Lieu de Fabrication" : "Chine",
+    "Matériau Principal" : "Synthétique",
+    "Prix": "50-100€"
+},
+{
+    "Type" : "Costume",
+    "Marque" : "Gucchi",
+    "Lieu de Fabrication" : "Italie",
+    "Matériau Principal" : "Cashmire",
+    "Prix": ">500€"
+ }
+]
+  
+
+  

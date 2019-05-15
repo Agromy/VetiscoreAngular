@@ -9,6 +9,9 @@ import { AstucesComponent } from './astuces/astuces.component';
 import { NewsletterComponent } from './newsletter/newsletter.component';
 import { LoginComponent } from './login/login.component';
 import { VetilistComponent } from './vetilist/vetilist.component';
+import { VetListComponent } from './vet-list/vet-list.component';
+import { VetCreateComponent } from './vet-create/vet-create.component';
+import { VetDetailComponent } from './vet-detail/vet-detail.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +22,10 @@ import { VetilistComponent } from './vetilist/vetilist.component';
     AstucesComponent,
     NewsletterComponent,
     LoginComponent,
-    VetilistComponent
+    VetilistComponent,
+    VetListComponent,
+    VetCreateComponent,
+    VetDetailComponent
   ],
   imports: [
     BrowserModule
