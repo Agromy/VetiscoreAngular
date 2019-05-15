@@ -1,3 +1,36 @@
-<p>
-  forum works!
-</p>
+<h1>Bienvenue sur le forum VétiScore</h1>
+<section>
+  <article>Le forum est un lieu d'échanges entre utilisateurs. Donnez-nous vos trucs et astuces</article>
+  <article class = "commentaire">
+    <ul>
+      <li *ngFor="let com of comList">{{ com.titre }} {{com.pseudo}},{{com.comment}}</li>
+    </ul>
+
+    <form (ngSubmit)="addCom();form.reset()" #form="ngForm">
+
+      <div>
+        <label for="create[titre]">Titre com</label>
+        <!--ng model s'écrit toujours [()] sinon cela ne fonctionne pas-->
+        <!--Ne pas oublier d'importer dans app module le formsmodules-->
+        <input id="create[titre]" name="titre" [(ngModel)]="newCom.titre">
+      </div>
+
+      <div>
+        <label for="create[pseudo]">Pseudo</label>
+        <input  type="text"id="create[pseudo]" name="pseudo" [(ngModel)]="newCom.pseudo">
+      </div>
+
+      <div>
+        <input  type="text"id="create[comment]]" name="comment" [(ngModel)]="newCom.comment">
+      </div>
+
+      <button type="submit" id="newCom">Répondre</button>
+
+    </form>
+
+    <div>
+      {{newCom| json}}
+    </div>
+
+  </article>
+</section>

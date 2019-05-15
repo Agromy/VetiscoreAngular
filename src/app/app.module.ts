@@ -9,6 +9,8 @@ import { AstucesComponent } from './astuces/astuces.component';
 import { NewsletterComponent } from './newsletter/newsletter.component';
 import { LoginComponent } from './login/login.component';
 import { VetilistComponent } from './vetilist/vetilist.component';
+import {FormsModule} from "@angular/forms";
+import { HttpClientModule} from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -22,7 +24,11 @@ import { VetilistComponent } from './vetilist/vetilist.component';
     VetilistComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    //pour utiliser ngModel dans les forms
+    FormsModule,
+    HttpClientModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]
