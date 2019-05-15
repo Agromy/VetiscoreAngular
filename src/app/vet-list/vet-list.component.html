@@ -1,3 +1,6 @@
-<p>
-  vet-list works!
-</p>
+<div>
+  <h3>Liste de vêtement</h3>
+  <ul>
+    <li *ngFor="let vetement of vetementList">{{vetement.type}} -- {{vetement.marque}}</li>
+  </ul>
+</div>
