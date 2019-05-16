@@ -44,6 +44,18 @@ this.currentVet = vetement;
 la valeur de la variable currentVet qui est ensuite
 donnée à vet-detail par property binding*/
 
+addVetementToList(vetement: Vetement){
+  console.log(vetement)
+this.vetements.unshift(vetement)
+this.currentVet = vetement;
+}
+/*La function a pour but d'ajouter au tableau "vetements"
+une nouvelle valeur qui est contenue dans le parametre
+appelé vetement qui a été passé grace a l'evennement
+VetementCreated.
+On change ensuite la valeur du CurrentVet par celui
+qui vient d'être créé*/
+
 ngOnInit() {
   }
 

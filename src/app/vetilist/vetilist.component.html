@@ -1,4 +1,4 @@
-<app-vet-create></app-vet-create>
+<app-vet-create (vetementCreated)="addVetementToList($event)"></app-vet-create>
 <!--vetilist à reçu de vet-create.ts l'évènement "VetementCreated" grâce a l'Output
 Pour utiliser cet évênement venant de l'enfant il faut
 le mettre entre () dans la balise du composant d'ou il vient-->
