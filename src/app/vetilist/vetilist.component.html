@@ -1,6 +1,16 @@
 <app-vet-create></app-vet-create>
-<app-vet-list [blabla]="vetements"></app-vet-list>
-<!--Je donne grace a [] la propriété blabla a vet-list qui est égale a vetements de
+<!--vetilist à reçu de vet-create.ts l'évènement "VetementCreated" grâce a l'Output
+Pour utiliser cet évênement venant de l'enfant il faut
+le mettre entre () dans la balise du composant d'ou il vient-->
+
+<app-vet-list [blabla]="vetements" (vetementSelected)=afficheDetail($event)></app-vet-list>
+<!--Je donne grâce à [] la propriété blabla a vet-list qui est égale à vetements de
 vetilist.ts-->
-<app-vet-detail [detail]="vetements"></app-vet-detail>
+<!--L'evènement vetementSelected est reçu de vet-list grâce à output
+ et est utilisable par event binding. Cet évènement contient une valeur
+(vetement) que je donne a une autre fonction afficheDetail par le $event-->
+
+<app-vet-detail [detail]="currentVet"></app-vet-detail>
+<!--Je donne la propriété detail a vet-detail qui est égale à currentVet de
+vetilist.ts-->
 

@@ -1,6 +1,10 @@
 <div>
   <h3>Liste de vêtement</h3>
   <ul>
-    <li *ngFor="let vetement of blabla">{{vetement.type}} -- {{vetement.marque}}</li>
+    <li *ngFor="let vetement of blabla" 
+    (click)="selectVetement(vetement)">{{vetement.type}} -- {{vetement.marque}}</li>
+    <!--L'évênement "click" est natif de angular.
+    On dit ici que :"Au click sur l'élément li, on exécute la fonction
+    selectVetement(vetement) de vet-list.component.ts-->
   </ul>
 </div>

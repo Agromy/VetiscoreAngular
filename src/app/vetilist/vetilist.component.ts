@@ -12,28 +12,37 @@ export class VetilistComponent implements OnInit {
 
 vetements : Array<Vetement> = [
   {
-    "type" : "Chaussettes",
-    "marque" : "Comptoir des cotonniers",
-    "lieuFabrication" : "France",
-    "matériauPrincipal" : "Coton",
-    "prix": ""
+    type : "Chaussettes",
+    marque : "Comptoir des cotonniers",
+    lieuFabrication : "France",
+    materiauPrincipal : "Coton",
+    prix : PrixRange.lt50e
         },
     
         {
-    "type" : "Pantalon",
-    "marque" : "Jules",
-    "lieuFabrication" : "Chine",
-    "matériauPrincipal" : "Synthétique",
-    "prix": ""
+    type : "Pantalon",
+    marque : "Jules",
+    lieuFabrication : "Chine",
+    materiauPrincipal : "Synthétique",
+    prix: PrixRange.b50100e
         },
         {
-    "type" : "Costume",
-    "marque" : "Gucchi",
-    "lieuFabrication" : "Italie",
-    "matériauPrincipal" : "Cashmire",
-    "prix": ""
+    type : "Costume",
+    marque : "Gucchi",
+    lieuFabrication : "Italie",
+    materiauPrincipal : "Cashmire",
+    prix: PrixRange.gt500e
         }
-]
+];
+
+currentVet = this.vetements[0];
+
+afficheDetail(vetement: Vetement){
+this.currentVet = vetement;
+}
+/*Le but de la fonction affiche détail est de changer
+la valeur de la variable currentVet qui est ensuite
+donnée à vet-detail par property binding*/
 
 ngOnInit() {
   }

@@ -2,8 +2,8 @@ export class Vetement {
     type: string;
     marque: string;
     lieuFabrication: string;
-    matériauPrincipal : string;
-    prix : ""
+    materiauPrincipal : string;
+    prix : PrixRange
 }
 
 export enum PrixRange {
