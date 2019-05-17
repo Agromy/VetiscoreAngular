@@ -14,6 +14,9 @@ et appelle VetementCreated. la création de l'evennement se fait grace "new Even
 qui est un Objet angular permettant de fabriquer des ses propres evenement
 je dois le typer car il s'agit d'un objet */
 
+range = PrixRange;
+/*je donne a ma class la propriété prix range pour pouvoir l'utiliser ensuite dans mon template (cf option de choix sur les prix)*/
+
  newVet = new Vetement;
  /*Je créée un variable newVet qui contient un nouvel objet Vetement de la 
  classe Vetement que j'ai importé. Cet objet contient */

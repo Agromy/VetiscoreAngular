@@ -20,7 +20,7 @@
      <div>
        <label for="create[lieuFabrication]">Lieu de Fabrication : </label>
        <input id="create[lieuFabrication]" name="lieuFabrication" [(ngModel)]="newVet.lieuFabrication"
-       #inputlieuFabrication="ngModel" required pattern="[a-zA-Z -]{0,36}">
+       #inputlieuFabrication="ngModel" required pattern="[a-zA-Zéèêôù -]{0,36}">
        <p [hidden]="inputlieuFabrication.valid || inputlieuFabrication.untouched">Vous ne pouvez utiliser que des lettres, tirets et espaces</p>
         <!-- Le double binding pourrait presque etre simplement remplacer par un event binding
       puisqu'il s'agit ici de seulement envoyer une info dans newVet-->
@@ -28,7 +28,7 @@
      <div>
        <label  for="create[materiauPrincipal]">Materiau Principal : </label>
        <input type="text" id="create[materiauPrincipal]" name="materiauPrincipal" [(ngModel)]="newVet.materiauPrincipal"
-       #inputmateriauPrincipal="ngModel" required pattern="[a-zA-Z -]+">
+       #inputmateriauPrincipal="ngModel" required pattern="[a-zA-Zéèêôù -]+">
        <p [hidden]="inputmateriauPrincipal.valid || inputmateriauPrincipal.untouched">Vous ne pouvez utiliser que des lettres, tirets et espaces</p>
        <!--le type="text" n'est pas nécessaire puisque text est le type par défaut de input
       le + sur les pattern signifie "au moins 1"-->
@@ -36,11 +36,12 @@
      <div>
        <label for="create[prix]">Prix : </label>
        <select id="create[prix]" name="prix" [(ngModel)]="newVet.prix" required>
-         <option value="lt50e">0-50€</option>
-         <option value="b50100e">50-100€</option>
-         <option value="b100200e">100-200€</option>
-         <option value="b200500e">200-500€</option>
-         <option value="gt500e">>500€</option>
+         <option>{{range.lt50e}}</option>
+         <!--la value de la balise option, si non définie sera par défaut celle du texte écrit dans l'option-->
+         <option value="50-100€">50-100€</option>
+         <option value="100-200€">100-200€</option>
+         <option value="200-500€">200-500€</option>
+         <option value=">500€">>500€</option>
         </select>
      </div>
      <button [disabled]="form.invalid">Add to List</button>
