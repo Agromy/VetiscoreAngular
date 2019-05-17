@@ -1,0 +1,28 @@
+.main-details {
+    padding: 40px;
+    width: calc(100% - 380px);
+}
+
+.main-details h1 {
+    border-bottom: 2px solid #efcc10;
+}
+
+
+/* RESPONSIVE */
+
+
+/* < 1024 */
+
+@media only screen and (max-width: 1024px) {}
+
+
+/* < 768 */
+
+@media only screen and (max-width: 667px) {
+    .main-details {
+        padding: 4%;
+        display: block;
+        width: 92%;
+        margin: 0
+    }
+}

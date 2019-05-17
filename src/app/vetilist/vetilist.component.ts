@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Vetement, PrixRange } from '../vetement';
+import { VetementProviderService} from '../vetement-provider.service'
 
 @Component({
   selector: 'app-vetilist',
@@ -8,34 +9,17 @@ import { Vetement, PrixRange } from '../vetement';
 })
 export class VetilistComponent implements OnInit {
 
-  title = 'Vetiscore';
+title = 'Vetiscore';
+vetements : Array<Vetement>;
+currentVet: Vetement
 
-vetements : Array<Vetement> = [
-  {
-    type : "Chaussettes",
-    marque : "Comptoir des cotonniers",
-    lieuFabrication : "France",
-    materiauPrincipal : "Coton",
-    prix : PrixRange.lt50e
-        },
-    
-        {
-    type : "Pantalon",
-    marque : "Jules",
-    lieuFabrication : "Chine",
-    materiauPrincipal : "Synthétique",
-    prix: PrixRange.b50100e
-        },
-        {
-    type : "Costume",
-    marque : "Gucchi",
-    lieuFabrication : "Italie",
-    materiauPrincipal : "Cashmire",
-    prix: PrixRange.gt500e
-        }
-];
 
-currentVet = this.vetements[0];
+
+constructor ( vetementProvider : VetementProviderService){
+  this.vetements=vetementProvider.vetements
+  this.currentVet = this.vetements[0];
+}
+
 
 afficheDetail(vetement: Vetement){
 this.currentVet = vetement;
@@ -51,7 +35,7 @@ this.currentVet = vetement;
 }
 /*La function a pour but d'ajouter au tableau "vetements"
 une nouvelle valeur qui est contenue dans le parametre
-appelé vetement qui a été passé grace a l'evennement
+appelé vetement qui a été passé grâce à l'evennement
 VetementCreated.
 On change ensuite la valeur du CurrentVet par celui
 qui vient d'être créé*/

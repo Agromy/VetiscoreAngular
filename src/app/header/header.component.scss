@@ -1,36 +1,165 @@
-div{
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  background: rgb(83, 75, 66);
-  border: 2px grey solid;
-  position: sticky;
-  top: 0;
+header {
+    background: rgba(252, 254, 255, .1) url('/assets/img/header-bg.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: top;
+    display: block;
+    height: 800px;
 }
-h1 {
-  align-self: center;
-  color: cadetblue;
-  font-family: cursive;
-  font-size: 400%;
+
+.top-header {
+    background: rgba(252, 254, 255, .6);
+    box-shadow: 0 4px 10px -2px rgba(0, 0, 0, .05);
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    color: #252f30;
+    padding: 10px 40px;
+    transition: .2s linear;
 }
-img {
-  max-height: 200px;
+
+.top-header:hover {
+    background: rgba(252, 254, 255, .8);
+    transition: .2s linear;
 }
-nav {
-  display: flex;
-  flex-direction: column;
-  padding-right: 5px;
-  justify-content: center;
-  align-items: center;
-  color: cadetblue;
+
+.top-header a {
+    border-bottom: 2px solid transparent;
+    transition: .2s linear;
 }
-nav a, nav button {
-  color: rgb(176, 215, 216);
+
+.top-header a:hover {
+    border-bottom: 2px solid #252f30;
+    transition: .2s linear;
 }
-button{
-  background: plum;
-  text-align: center;
-  border-radius: 10px;
-  box-shadow: 1px 1px 1px #000;
-  color: rgb(90, 88, 88);
+
+.app-header {
+    display: block;
+}
+
+.app-header img {
+    display: inline-block;
+    height: 80px;
+    vertical-align: middle;
+}
+
+.app-header .app-name {
+    display: inline-block;
+    font-weight: 400;
+    font-size: 2.4em;
+    padding: 0 20px;
+    vertical-align: middle;
+}
+
+.nav-header a {
+    font-size: 1.2em;
+    padding: 10px 25px;
+    margin: 0 25px;
+}
+
+.form-header {
+    display: block;
+    margin: 30px;
+    min-width: 200px;
+    padding: 70px 20px;
+    text-align: center;
+}
+
+.form-header .header-search_title {
+    font-size: 4em;
+    margin: 70px auto;
+    text-align: center
+}
+
+.form-header input,
+.form-header button {
+    background: transparent;
+    color: white;
+    display: inline-block;
+    height: 40px;
+    margin: 0 10px;
+    padding: 2px 8px;
+}
+
+.form-header input {
+    background: rgba(252, 254, 255, .6);
+    border: 1px solid #252f30;
+    color: #252f30;
+    width: 400px;
+}
+
+.form-header input::placeholder {
+    color: #252f30;
+}
+
+.form-header button {
+    background: #0c1213;
+    border-top: none;
+    width: 150px;
+}
+
+.form-header button:hover {
+    background: #353f40;
+    transition: .2s linear;
+}
+
+
+/* Responsive */
+
+
+/* < 1024 */
+
+@media only screen and (max-width: 1024px) {
+    header {
+        height: 600px;
+    }
+    .top-header {
+        padding: 10px 0;
+    }
+    .app-header,
+    .nav-header {
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+    .form-header {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+    }
+    .header-search_title {
+        font-size: 1em;
+    }
+}
+
+
+/* < 768 */
+
+@media only screen and (max-width: 667px) {
+    header {
+        height: 560px;
+    }
+    .app-header .app-name {
+        font-size: 2em;
+    }
+    .form-header {
+        font-size: 1.8em;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+    }
+    .form-header .header-search_title {
+        font-size: 1.4em;
+    }
+    .form-header input {
+        width: 80%;
+    }
+    .form-header input,
+    .form-header button {
+        margin-bottom: 20px;
+    }
+    .nav-header {
+        display: none;
+    }
 }

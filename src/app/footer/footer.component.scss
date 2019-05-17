@@ -1,54 +1,77 @@
-
-
-#artFooter1{
-    display: flex;
-    align-self: center;
-}
-footer article{
-    color: rgb(176, 215, 216);
-}
-#artFooter3{
-    display: flex;
-    flex-direction: column;
-    justify-content:  space-around;
-}
-#artFooter3 img {
-    height: 50px;
-   
-}
-
-#div1Foot2 .media{
-    display: flex;
-    justify-content: center;
+footer {
+    background: #FCFEFF;
+    box-shadow: 0 -4px 10px -2px rgba(0, 0, 0, 0.1);
+    color: #0c1213;
+    display: table;
+    padding: 20px 5% 40px 5%;
     text-align: center;
-}
-#div2Foot2 {
-    text-align : center;
+    width: 90%;
 }
 
-h5{
-    font-size: 1.15em;
-    
+footer h3 {
+    font-family: 'Palanquin', sans-serif;
+    font-weight: 700;
+    padding: 20px 0;
+    text-transform: uppercase;
 }
 
-#contact{
-    font-size: 1.5em;
-    color: whitesmoke;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+footer .footer-index,
+footer .footer-location,
+footer .footer-contact,
+footer .footer-socials {
+    display: inline-block;
+    vertical-align: top;
+    width: 30%
 }
 
-#contact, #tel, #adresse {
-    padding: 0;
+footer .footer-location ul {
+    float: right;
+    text-align: left;
 }
 
-#map{
-    height: 500px;
+footer .footer-socials {
+    display: block;
+    margin: auto;
+    width: 50%;
 }
 
-p{
-    color: #ADCA48;
+footer .footer-socials ul {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
 }
 
-.media p{
-    padding: 0px;
+footer .footer-socials img {
+    width: 50px
+}
+
+#copyright {
+    background: #FCFEFF;
+    display: block;
+    text-align: center;
+    width: 100%;
+}
+
+
+/* RESPONSIVE */
+
+
+/* < 1024 */
+
+@media only screen and (max-width: 1024px) {
+    footer {
+        padding: 20px 5% 40px 5%;
+        width: 90%
+    }
+    footer .footer-index,
+    footer .footer-location,
+    footer .footer-contact,
+    footer .footer-socials {
+        display: block;
+        width: 100%
+    }
+    footer .footer-location ul {
+        float: none;
+        text-align: center;
+    }
 }
